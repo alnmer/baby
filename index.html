@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulip Love</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fce4ec;
+        }
+        .tulip {
+            width: 150px;
+            cursor: pointer;
+            transition: transform 0.5s;
+        }
+        .hidden-content {
+            display: none;
+            text-align: center;
+        }
+        .hidden-content img {
+            width: 200px;
+            margin-top: 10px;
+        }
+        .hidden-content p {
+            font-size: 24px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="flower-container">
+        <img id="tulip" class="tulip" src="./download.jpg" alt="Tulip">
+        <div id="hiddenContent" class="hidden-content">
+            <p>I Love You ❤️</p>
+            <img src="./Screenshot 2025-02-21 001510.png" alt="Heart">
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("tulip").addEventListener("click", function() {
+            document.getElementById("hiddenContent").style.display = "block";
+            this.style.display = "none";
+        });
+    </script>
+</body>
+</html>
